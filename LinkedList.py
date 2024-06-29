@@ -1,11 +1,12 @@
 class Node:
-    #Initializing a node object with data, previous pointer and next pointer set to None by default
+    # Initializing a node object with data, previous pointer and next pointer set to None by default
     def __init__(self, data):
         self.data = data
         self.next = None
         self.prev = None
 
-# Node has list of elements
+
+# Node has list of elements seperately so that we can sophesticate head acceess
 class DoublyLinkedList:
     def __init__(self):
         self.head = None
@@ -50,13 +51,27 @@ class DoublyLinkedList:
             current = current.next
         print("None")
 
+    def delete(self, key):
+        current = self.head
+        if current.next is None:
+            self.head = None
+        while current.next:
+            previous = current
+            current = current.next
+            if current.data == key:
+                previous.next = current.next
+
+
 
 if __name__ == '__main__':
-    dll = DoublyLinkedList()
-    dll.append(2)
-    dll.append(3)
-    dll.append(4)
-    dll.display()  # Output: 2 -> 3 -> 4 None
+    dl2 = DoublyLinkedList()
+    dl2.append(2)
+    dl2.append(3)
+    dl2.append(4)
+    dl2.display()  # Output: 2 -> 3 -> 4 None
 
-    dll.prepend(1)
-    dll.display()  # Output: 1 -> 2 -> 3 -> 4 None
+    dl2.prepend(1)
+    dl2.display()  # Output: 1 -> 2 -> 3 -> 4 None
+
+    dl2.delete(3)
+    dl2.display()
