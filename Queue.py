@@ -5,7 +5,7 @@ class Node(object):
         self.prev = None
 
 
-class Queue(object):
+class QueueImplementation(object):
     def __init__(self):
         self.front = None
         self.rear = None
@@ -45,7 +45,7 @@ class Queue(object):
 
 
 if __name__ == '__main__':
-    q = Queue()
+    q = QueueImplementation()
     q.enqueue(5)
     q.enqueue(6)
     q.enqueue(7)
