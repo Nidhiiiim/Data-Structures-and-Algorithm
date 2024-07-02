@@ -29,6 +29,3 @@ print(city_visited)
 print(city_visited.keys())
 print(city_visited.values())
 print(city_visited.items())
-
-
-
