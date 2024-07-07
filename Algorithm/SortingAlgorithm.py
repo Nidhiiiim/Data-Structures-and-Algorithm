@@ -31,6 +31,13 @@ def selection(array):
         array[i], array[min_index] = array[min_index], array[i]
     return array
 
+# MERGE SORT
+
+
+# QUICK SORT
+
+
+# INSERTION SORT
 
 arr = [1, 24, 4, 5, 6, 8]
 print(bubble(arr))

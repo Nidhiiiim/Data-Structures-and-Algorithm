@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="072f6f86-00ca-4954-90a9-b653c4d044e9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Algorithm/Search Algorithm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Algorithm/SortingAlgorithm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SlidingWindow Algo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithm/DepthFirstSearch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Arrays.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recursion Probelm 1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HashMaps.py" beforeDir="false" afterPath="$PROJECT_DIR$/HashMaps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Heaps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Heaps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Algorithm/SortingAlgorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/SortingAlgorithm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BinarySearchTrees.py" beforeDir="false" afterPath="$PROJECT_DIR$/BinarySearchTrees.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +38,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.Arrays.executor": "Run",
     "Python.BinarySearchTrees.executor": "Run",
     "Python.HashMaps.executor": "Run",
     "Python.Heaps.executor": "Run",
@@ -73,7 +74,8 @@
       <option name="presentableId" value="Default" />
       <updated>1719409571167</updated>
       <workItem from="1719409574467" duration="40593000" />
-      <workItem from="1719836316974" duration="12214000" />
+      <workItem from="1719836316974" duration="19944000" />
+      <workItem from="1720351053285" duration="8924000" />
     </task>
     <servers />
   </component>
@@ -86,7 +88,8 @@
     <SUITE FILE_PATH="coverage/DataStructures$LinkedList.coverage" NAME="LinkedList Coverage Results" MODIFIED="1719691976086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DataStructures$Heaps.coverage" NAME="Heaps Coverage Results" MODIFIED="1719921378720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DataStructures$Linear_Search_Algorithm.coverage" NAME="Linear Search Algorithm Coverage Results" MODIFIED="1719936765636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Algorithm" />
-    <SUITE FILE_PATH="coverage/DataStructures$BinarySearchTrees.coverage" NAME="BinarySearchTrees Coverage Results" MODIFIED="1719485789615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DataStructures$BinarySearchTrees.coverage" NAME="BinarySearchTrees Coverage Results" MODIFIED="1719973872791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DataStructures$Arrays.coverage" NAME="Arrays Coverage Results" MODIFIED="1720361333004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DataStructures$HashMaps.coverage" NAME="HashMaps Coverage Results" MODIFIED="1719697879876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DataStructures$Queue.coverage" NAME="Queue Coverage Results" MODIFIED="1719696044177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

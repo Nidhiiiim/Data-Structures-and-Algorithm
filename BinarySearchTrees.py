@@ -69,6 +69,16 @@ def print_tree(root, level=0, prefix="Root: "):
                 print(" " * ((level + 1) * 4) + "R--- " + "None")
 
 
+class Search:
+    def depthfirstsearch(self, root: TreeNode):
+        if root is None:
+            return 0
+        return 1 + max(self.depthfirstsearch(root.left), self.depthfirstsearch(root.right))
+
+    def breadthfirstSearch(self, root: TreeNode):
+        if root is None:
+            return 0
+        
 ## Solving Puzzles.
 
 
@@ -83,3 +93,4 @@ if __name__ == "__main__":
     print(preorder(root))
     print(postorder(root))
     print_tree(root)
+    print(Search().depthfirstsearch(root))
