@@ -11,7 +11,7 @@ class TreeNode:
 def inorder(root):
     # For storing values inorder
     res = []
-    #If there is value in root
+    # If there is value in root
     if root:
         # Recursively go to left
         res = inorder(root.left)

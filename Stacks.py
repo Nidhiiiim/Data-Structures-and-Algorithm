@@ -1,39 +1,40 @@
-class Stack:
+### IMPLEMENTING STACK USING ARRAYS
+class stack:
     def __init__(self):
+        # Need empty list called stack
+        # self method initialioses variable for the instance with all structure attributes
         self.stack = []
         self.size = 0
         self.top = None
 
+    ## PUSHING
     def push(self, value):
         self.stack.append(value)
         self.size += 1
-        self.top = self
-        return self
-
+        self.top = self.stack[-1]
     def pop(self):
         if self.size == 0:
-            self.top = None
-        self.size -= 1
+            print("Stack is empty")
+            return None
         return self.stack.pop()
 
     def peek(self):
         if self.size == 0:
+            print("Stack is empty")
             return None
         return self.stack[-1]
 
-    def is_empty(self):
+    def isEmpty(self):
         return self.size == 0
 
-    def display(self):
-        print(self.stack)
+    def size(self):
+        return len(self.stack)
 
 
-if __name__ == '__main__':
-    s = Stack()
-    s.push(1)
-    s.push(2)
-    s.push(3)
-    s.push(4)
-
-    # Pops  last element that was added
-    s.peek()
+if __name__ == "__main__":
+    s = stack()
+    s.push(5)
+    s.push(6)
+    s.push(7)
+    print(s.top)
+    s.pop()

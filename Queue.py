@@ -1,59 +1,28 @@
-class Node(object):
-    def __init__(self, data):
+### QUEUE IMPLEMENTATION USING LINKEDLIST ###
+class QNode:
+    def __init__(self,data):
         self.data = data
         self.next = None
         self.prev = None
-
-
-class QueueImplementation(object):
+class Queue:
     def __init__(self):
         self.front = None
         self.rear = None
+        self.size = 0
 
-    def enqueue(self, value):
-        node = Node(value)
-        if self.rear is None:
+    def isEmpty(self):
+        return self.size == 0
+
+    def enqueue(self,data):
+        node = QNode(data)
+        if self.isEmpty():
             self.front = node
             self.rear = node
-        else:
-            self.rear.next = node
-            node.prev = self.rear
-            self.rear = node
-        return True
-
-    def display(self):
-        current = self.front
-        while current:
-            print(current.data, end=" ")
-            if current.next:
-                print("<-", end=" ")
-            current = current.next
-        print("None")
-
+            self.size += 1
+        self.rear = node
+        return node
     def dequeue(self):
-        if self.front is None:
+        if self.front == None:
+            print("Queue is empty")
             return None
-        self.front = self.front.next
-        self.front.prev = None
-        return self.front
 
-    def peek(self):
-        if self.front is None:
-            return None
-        print(self.front.data)
-        return self.front
-
-
-if __name__ == '__main__':
-    q = QueueImplementation()
-    q.enqueue(5)
-    q.enqueue(6)
-    q.enqueue(7)
-    q.enqueue(8)
-
-    q.display()
-
-    q.dequeue()
-    q.display()
-
-    q.peek()
