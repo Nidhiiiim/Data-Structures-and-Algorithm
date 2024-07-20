@@ -1,96 +1,62 @@
-class TreeNode:
-    # Constructor for treenode class, initializes node with value key
-    def __init__(self, val):
-        self.right = None
+class Node:
+    def __init__(self, value):
+        self.value = value
         self.left = None
-        self.val = val
-
-        # Takes root of tree as parameter
+        self.right = None
 
 
-def inorder(root):
-    # For storing values inorder
-    res = []
-    # If there is value in root
-    if root:
-        # Recursively go to left
-        res = inorder(root.left)
+class BinarySearchTree:
 
-        # Store all left node values
-        res.append(root.val)
-        res = res + inorder(root.right)
+   def __init__(self):
+       self.root = None
 
-    # Gives the binary tree in order
-    return res
+    def preorder(self):
+        return self._preorder(self.root, [])
 
+    def _preorder(self, node, res):
+        if node:
+            res.append(node.val)
+            self._preorder(node.left, res)
+            self._preorder(node.right, res)
+        return res
 
-def preorder(root):
-    # To Store pre order array
-    res = []
-    if root:
-        res.append(root.val)
-        res = res + preorder(root.left)
-        res = res + preorder(root.right)
-    return res
-
-
-def postorder(root):
-    res = []
-    if root:
-        res = postorder(root.left)
-        res = res + postorder(root.right)
-        res = res + [root.val]
-    return res
-
-
-# All are recursive function, where function calls itself
-def insert(root, key):
-    if root is None:
-        return TreeNode(key)
-    else:
-        if key < root.val:
-            root.left = insert(root.left, key)
+    def insert(self, value):
+        if self.root is None:
+            return Node(value)
         else:
-            root.right = insert(root.right, key)
-    return root
-
-
-def print_tree(root, level=0, prefix="Root: "):
-    if root is not None:
-        print(" " * (level * 4) + prefix + str(root.val))
-        if root.left is not None or root.right is not None:
-            if root.left is not None:
-                print_tree(root.left, level + 1, "L--- ")
+            if self.root.value == value:
+                return self.root
+            elif value < self.root.value:
+                self.root.left = self.insert(self.root.left, value)
             else:
-                print(" " * ((level + 1) * 4) + "L--- " + "None")
-            if root.right is not None:
-                print_tree(root.right, level + 1, "R--- ")
-            else:
-                print(" " * ((level + 1) * 4) + "R--- " + "None")
+                self.root.right = self.insert(self.root.right, value)
+        return self.root
 
 
-class Search:
-    def depthfirstsearch(self, root: TreeNode):
-        if root is None:
-            return 0
-        return 1 + max(self.depthfirstsearch(root.left), self.depthfirstsearch(root.right))
-
-    def breadthfirstSearch(self, root: TreeNode):
-        if root is None:
-            return 0
-        
-## Solving Puzzles.
+    def dfs(self, value):
+        if self.root is None:
+            return False
+        if self.root.value == value:
+            return True
+        elif value < self.root.value:
+            return self.dfs(self.root.left, value)
+        else:
+            return self.dfs(self.root.right, value)
 
 
-if __name__ == "__main__":
-    root = TreeNode(5)
-    root = insert(root, 3)
-    root = insert(root, 7)
-    root = insert(root, 9)
-    root = insert(root, 2)
-    root = insert(root, 4)
-    print(inorder(root))
-    print(preorder(root))
-    print(postorder(root))
-    print_tree(root)
-    print(Search().depthfirstsearch(root))
+def print_tree(root):
+    if root is None:
+        return None
+    print_tree(root.left)
+
+
+if __name__ == '__main__':
+    bst = BinarySearchTree(5)
+    bst.insert(r, 3)
+    r = insert(r, 5)
+    r = insert(r, 6)
+    r = insert(r, 2)
+    print(inorder(r))
+    print(preorder(r))
+    print(postorder(r))
+    print(dfs(r, 3))
